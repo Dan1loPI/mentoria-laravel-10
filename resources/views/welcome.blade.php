@@ -3,12 +3,18 @@
 <html lang="en" data-bs-theme="auto">
   <head>
 
+<<<<<<< HEAD
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.112.5">
     <title>Dashboard Template · Bootstrap v5.3</title>
+=======
+        <!-- Fonts internas -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+>>>>>>> 29032bbab503f69785e1f5f8d67582104b2fc78e
 
 
     
