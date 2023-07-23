@@ -12,31 +12,31 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('vendas.index')}}">
             <svg class="bi"><use xlink:href="#file-earmark"/></svg>
             Venda
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('produtos.index')}}">
             <svg class="bi"><use xlink:href="#cart"/></svg>
             Produtos
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('clientes.index')}}">
             <svg class="bi"><use xlink:href="#people"/></svg>
             Clientes
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('relatorios.index')}}">
             <svg class="bi"><use xlink:href="#graph-up"/></svg>
             Relatorios
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center gap-2" href="#">
+          <a class="nav-link d-flex align-items-center gap-2" href="{{ route('produtos.index')}}">
             <svg class="bi"><use xlink:href="#puzzle"/></svg>
             Integrations
           </a>
@@ -61,4 +61,5 @@
       </ul>
     </div>
   </div>
+ 
   
