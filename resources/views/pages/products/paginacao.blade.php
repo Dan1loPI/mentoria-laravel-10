@@ -10,23 +10,30 @@
     <a href="" type="button" class="btn btn-success float-end"> Adicionar Produto</a>
   </form>
       <div class="table-responsive small mt-4">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Nome</th>
-              <th scope="col">Valor</th>
-              <th scope="col">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($findProducts as $product )
+        @if ($findProducts->isEmpty())
+          <p>Não existe dados</p>
+        @else
+          <table class="table table-striped table-sm">
+            <thead>
               <tr>
-                <td>{{ $product->nome }}</td>
-                <td>{{ $product->valor }}</td>
-                <td></td>
+                <th scope="col">Nome</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Ações</th>
               </tr>
-            @endforeach
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              @foreach ($findProducts as $product )
+                <tr>
+                  <td>{{ $product->nome }}</td>
+                  <td>{{ 'R$' . ' ' . number_format($product->valor, 2, ',', '.')}}</td>
+                  <td>
+                    <a href="" class="btn btn-light btn-sm">Editar</a>
+                    <a href=" {{ route('product.delete')}}" class="btn btn-danger btn-sm">Excluir</a>
+                  </td>
+                </tr>
+              @endforeach
+            </tbody>
+          </table>
+        @endif
       </div>
 @endsection

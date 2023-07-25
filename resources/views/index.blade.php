@@ -194,9 +194,13 @@
   </div>
 </div>
   @yield('scripts')
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
   <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="/js/chart.umd.min.js" crossorigin="anonymous"></script>
   <script src="/js/dashboard.js"></script>
   <script src="/js/color-modes.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
 </body>
 </html>
