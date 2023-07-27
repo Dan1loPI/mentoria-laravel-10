@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::prefix('produtos')->group(function(){
+    Route::get('/', [ProductController::class, 'index'])->name('produtos.index');
+    Route::delete('/delete', [ProductController::class, 'delete'])->name('produtos.delete');
+});
+
+Route::prefix('clientes')->group(function(){
+    Route::get('/', [ProductController::class, 'index'])->name('clientes.index');
+});
+
+Route::prefix('vendas')->group(function(){
+    Route::get('/', [ProductController::class, 'index'])->name('vendas.index');
+});
+
+Route::prefix('relatorios')->group(function(){
+    Route::get('/', [ProductController::class, 'index'])->name('relatorios.index');
 });
