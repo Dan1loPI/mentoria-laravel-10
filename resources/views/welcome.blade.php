@@ -3,23 +3,10 @@
 <html lang="en" data-bs-theme="auto">
   <head>
 
-<<<<<<< HEAD
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.112.5">
-    <title>Dashboard Template · Bootstrap v5.3</title>
-=======
-        <!-- Fonts internas -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
->>>>>>> 29032bbab503f69785e1f5f8d67582104b2fc78e
+    <!-- Fonts internas -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-
-    
-    
-    
     
     <link href="{{ asset('css/bootstrap.css')}}" rel="stylesheet" >
     <link href="{{ asset('css/dashboard.css')}}" rel="stylesheet">
@@ -217,7 +204,7 @@
 </svg>
 
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Company name</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Controle de Gestão</a>
 
   <ul class="navbar-nav flex-row d-md-none">
     <li class="nav-item text-nowrap">
@@ -250,7 +237,7 @@
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
                 <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Dashboard
+                Painel de Controle
               </a>
             </li>
             <li class="nav-item">
@@ -262,13 +249,13 @@
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#cart"/></svg>
-                Products
+                Produtos
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
                 <svg class="bi"><use xlink:href="#people"/></svg>
-                Customers
+                Clientes
               </a>
             </li>
             <li class="nav-item">
