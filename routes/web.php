@@ -19,8 +19,10 @@ Route::get('/', function () {
 });
 
 Route::prefix('produtos')->group(function(){
-    Route::get('/', [ProductController::class, 'index'])->name('produtos.index');
-    Route::delete('/delete', [ProductController::class, 'delete'])->name('produtos.delete');
+    Route::get('/', [ProductController::class, 'index'])->name('produto.index');
+    Route::get('/cadastrarProduto', [ProductController::class, 'cadastrarProduto'])->name('cadastrar.produto');
+    Route::post('/cadastrarProduto', [ProductController::class, 'cadastrarproduto'])->name('cadastrar.produto');
+    Route::delete('/delete', [ProductController::class, 'delete'])->name('produto.delete');
 });
 
 Route::prefix('clientes')->group(function(){

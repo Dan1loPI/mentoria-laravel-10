@@ -7,7 +7,7 @@
   <form action="" method="get">
     <input type="text" name="pesquisar" placeholder="Digite o nome">
     <button>Pesquisar</button>
-    <a href="" type="button" class="btn btn-success float-end"> Adicionar Produto</a>
+    <a href=" {{ route('cadastrar.produto')}}" type="button" class="btn btn-success float-end"> Adicionar Produto</a>
   </form>
       <div class="table-responsive small mt-4">
         @if ($findProducts->isEmpty())
@@ -28,7 +28,8 @@
                   <td>{{ 'R$' . ' ' . number_format($product->valor, 2, ',', '.')}}</td>
                   <td>
                     <a href="" class="btn btn-light btn-sm">Editar</a>
-                    <a href=" {{ route('product.delete')}}" class="btn btn-danger btn-sm">Excluir</a>
+                    <meta name='csrf-token' content="{{ csrf_token() }}"/>
+                    <a onclick="deleteRegistroPaginacao('{{ route('produto.delete')}}', {{ $product->id }})" class="btn btn-danger btn-sm">Excluir</a>
                   </td>
                 </tr>
               @endforeach
