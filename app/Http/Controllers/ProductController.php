@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\FormRequestProduct;
+use App\Models\Componentes;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -32,11 +33,33 @@ class ProductController extends Controller
       if ($request->method() == "POST"){
          // Criar  Produto
          $data = $request->all();
+         $componentes = new Componentes();
+         $data['valor'] = $componentes->formatacaoDinheiroDecimal($data['valor']);
          Product::create($data);
 
          return redirect()->route('produto.index');
       }
 
       return view('pages.products.create');
+   }
+
+   public function atualizaProduto(FormRequestProduct $request, $id){
+     
+      if ($request->method() == "PUT"){
+        // Atualiza Produto
+        $data = $request->all();
+        $componentes = new Componentes();
+        $data['valor'] = $componentes->formatacaoDinheiroDecimal($data['valor']);
+        
+        $findRegistro = Product::find($id);
+
+        $findRegistro->update($data);
+
+        return redirect()->route('produto.index');
+      }
+
+      $findProducts = Product::where('id', '=', $id)->first();
+
+      return view('pages.products.atualiza', compact('findProducts'));
    }
 }
